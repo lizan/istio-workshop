@@ -20,7 +20,7 @@ gcloud config get-value core/project
 
 If you are in an instructor led class with a provided credential, then you don't need to set another project ID.
 
-If you are using you are not using an instructor provided credentials, then you may need to specify a project ID:
+If you are not using an instructor provided credentials, then you may need to specify a project ID:
 
 ```sh
 gcloud config set project your-project-id
@@ -42,7 +42,7 @@ To create a container cluster execute:
 
 ```sh
 gcloud container clusters create guestbook \
-      --cluster-version=1.9.2-gke.1  \
+      --cluster-version=1.9.6-gke.0  \
       --num-nodes 3 \
       --machine-type n1-standard-2
 ```
