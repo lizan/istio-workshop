@@ -136,7 +136,7 @@ To better understand the istio proxy, let's inspect the details.  exec into the 
 
 ```sh
 kubectl get pods
-kubectl exec -it helloworld-service-v1-... -c istio-proxy  sh
+kubectl exec -it helloworld-service-v1-... -c istio-proxy bash
 ```
 
 Once in the container look at some of the envoy proxy details:
@@ -144,7 +144,7 @@ Once in the container look at some of the envoy proxy details:
 ```sh
 $  ps aux
 $  ls -l /etc/istio/proxy
-$  cat /etc/istio/proxy/envoy-rev0.json
+$  cat /etc/istio/proxy/envoy-rev...json
 ```
 
 You can also view the statistics, listeners, routes, clusters and server info for the envoy proxy by forwarding the local port:
