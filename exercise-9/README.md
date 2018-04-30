@@ -28,12 +28,12 @@ With shell script:
 while sleep 0.5; do curl http://$INGRESS_IP/echo/universe -A mobile; done
 ```
 
-Or, with wrk2:
+Or, with fortio:
 
 ```sh
-docker pull saturnism/wrk2
-docker run -ti --rm saturnism/wrk2 \
-  -d 5s R 5 http://$INGRESS_IP/hello/world
+docker pull istio/fortio
+docker run -ti --rm istio/fortio \
+  load -t 5s -qps 5 http://$INGRESS_IP/hello/world
 ```
 
 ### Zipkin
